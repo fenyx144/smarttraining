@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTraining 🌌</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body> <!-- Sección 1 -->
+    <div class="section" id="section-1">
+        <div class="typewriter" id="typewriter-0">
+            <h1>¡Bienvenido a QuizMaster 🌟!</h1>
+        </div>
+
+        <p>Conéctate con personas, emprende y aprende de manera interactiva.</p>
+
+        <button class="btn" onclick="startRegistration()">¡Regístrate ahora!</button>
+    </div> <!-- Sección 2 -->
+    <div class="section" id="section-2">
+        <div>
+            <h1>Descubre nuevas posibilidades</h1>
+            <p>Encuentra equipos para emprender o perfecciona tus habilidades.</p>
+        </div>
+    </div> <!-- Sección 3 -->
+    <div class="section" id="section-3">
+        <div>
+            <h1>Tu futuro comienza aquí</h1>
+            <p>Conéctate con tus metas y supera tus límites.</p>
+        </div>
+    </div> <!-- Formulario de Registro -->
+    <div class="section" id="registration-section">
+        <div class="question-container" id="question-1">
+            <div class="typewriter" id="typewriter-1">
+                <h1>¿Cuál es tu nombre?</h1>
+            </div> <input type="text" id="name" placeholder="Escribe tu nombre" class="form-control">
+            <br>
+            <div class="controls"> 
+                <button class="btn" onclick="ocultarForm()">Atrás</button>
+                <button class="btn" onclick="nextQuestion(2)">Siguiente</button> 
+            </div>
+        </div>
+        <div class="question-container" id="question-2">
+            <div class="typewriter" id="typewriter-2">
+                <h1>¿Cuál es tu correo electrónico?</h1>
+            </div> 
+            <input type="email" id="email" placeholder="Escribe tu correo" class="form-control">
+            <br>
+            <div class="controls"> 
+                <button class="btn" onclick="previousQuestion(1)">Atrás</button> 
+                <button class="btn" onclick="nextQuestion(3)">Siguiente</button> 
+            </div>
+        </div>
+        <div class="question-container" id="question-3">
+            <div class="typewriter" id="typewriter-3">
+                <h1>Ingrese su contraseña:</h1>
+            </div>
+            <input type="password" id="password" placeholder="Escribe tu contraseña" class="form-control">
+            <br>
+            <div class="controls">
+                <button class="btn" onclick="previousQuestion(2)">Atrás</button> 
+                <button class="btn" onclick="nextQuestion(4)">Siguiente</button> 
+            </div>
+        </div>
+        <div class="question-container" id="question-4">
+            <div class="checkbox-container">
+                <div class="typewriter" id="typewriter-4">
+                    <h1>¿Qué te gustría hacer?</h1>
+                </div>
+                <label> 
+                    <input type="checkbox" id="educate" value="educate"> 
+                    Quiero educarme 
+                </label> 
+                <label> 
+                    <input type="checkbox" id="team" value="team"> 
+                    Quiero buscar equipo
+                </label>
+            </div>
+            <br>
+            <div class="controls"> 
+                <button class="btn" onclick="previousQuestion(3)">Atrás</button> 
+                <button class="btn" onclick="submitForm()">Enviar</button> </div>
+        </div>
+    </div>    
+    <script src="scripts.js"></script>
+</body>
+
+</html>

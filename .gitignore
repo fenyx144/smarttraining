@@ -1,0 +1,8 @@
+# Ignorar la carpeta del entorno virtual
+env/
+*.pyc
+__pycache__/
+
+# Otros archivos que no deberían subirse
+*.log
+*.sqlite3
